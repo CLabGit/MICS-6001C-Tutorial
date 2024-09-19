@@ -7,7 +7,7 @@
 .Xil
 _x
 *.xo
-build/
+#build/
 *.ltx
 *.xclbin
 *.info

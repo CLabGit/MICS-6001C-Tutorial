@@ -1,9 +1,6 @@
-<table class="sphinxhide" width="100%">
  <tr width="100%">
     <td align="center"><h1>Vitis™ Hardware Acceleration Introduction Tutorial</h1>  
  </tr>
-</table>
-
 
 *Acknowledgement*: This tutorial is adapted from [Vitis™ Hardware Acceleration Introduction Tutorial](https://github.com/Xilinx/Vitis-Tutorials/tree/2024.1/Hardware_Acceleration/Design_Tutorials/10-get_moving_with_alveo) and modified to our server environment. 
 
