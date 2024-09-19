@@ -1,0 +1,11 @@
+xml
+rst
+.stamp
+*.sh
+*.csh
+*.pyc
+_themes
+_ext
+_templates
+_build
+build

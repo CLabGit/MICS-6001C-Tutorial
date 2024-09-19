@@ -1,0 +1,161 @@
+{
+   "platformData" : {
+      "plp" : {
+         "slaveBridge" : "enabled",
+         "cdmaBaseAddress1" : "0x0",
+         "ertCmdqBaseAddr" : "0x008000000000",
+         "m2m_address" : "0x00020000",
+         "cdmaBaseAddress2" : "0x0",
+         "ertVersion" : "30",
+         "dma" : "xdma",
+         "ertBaseAddr" : "0x0",
+         "ert" : "enabled",
+         "peerToPeer" : "enabled",
+         "cdmaBaseAddress0" : "0x0",
+         "m2m" : "enabled",
+         "cdmaBaseAddress3" : "0x0",
+         "numCdma" : "0"
+      },
+      "ulp" : {}
+   },
+   "raptor2" : {
+      "resources" : {
+         "HOST" : {
+            "M01_AXI_MEM00" : {
+               "slr" : "SLR2",
+               "index" : "0",
+               "mode" : "slave",
+               "sptag" : "HOST",
+               "data_width" : "32",
+               "max_masters" : "15"
+            }
+         },
+         "PLRAM" : {
+            "PLRAM_MEM03" : {
+               "slr" : "SLR3",
+               "index" : "3",
+               "mode" : "slave",
+               "sptag" : "PLRAM",
+               "data_width" : "512",
+               "max_masters" : "15"
+            },
+            "PLRAM_MEM02" : {
+               "slr" : "SLR2",
+               "index" : "2",
+               "mode" : "slave",
+               "sptag" : "PLRAM",
+               "data_width" : "512",
+               "max_masters" : "15"
+            },
+            "PLRAM_MEM01" : {
+               "slr" : "SLR1",
+               "index" : "1",
+               "mode" : "slave",
+               "sptag" : "PLRAM",
+               "data_width" : "512",
+               "max_masters" : "15"
+            },
+            "PLRAM_MEM00" : {
+               "slr" : "SLR0",
+               "index" : "0",
+               "mode" : "slave",
+               "sptag" : "PLRAM",
+               "data_width" : "512",
+               "max_masters" : "15"
+            }
+         },
+         "gts" : {
+            "1" : {
+               "slr_assignment" : "SLR2",
+               "diff_clocks" : [
+                  "io_clk_qsfp_refclka_01",
+                  "io_clk_qsfp_refclkb_01"
+               ],
+               "gt_group_select" : "QUAD_X1Y10",
+               "gt_serial_port" : "io_gt_qsfp_01"
+            },
+            "0" : {
+               "slr_assignment" : "SLR2",
+               "diff_clocks" : [
+                  "io_clk_qsfp_refclka_00",
+                  "io_clk_qsfp_refclkb_00"
+               ],
+               "gt_group_select" : "QUAD_X1Y11",
+               "gt_serial_port" : "io_gt_qsfp_00"
+            }
+         },
+         "DDR" : {
+            "M00_AXI_MEM00" : {
+               "slr" : "SLR1",
+               "index" : "1",
+               "mode" : "slave",
+               "sptag" : "DDR",
+               "data_width" : "512",
+               "max_masters" : "15"
+            },
+            "DDR4_MEM00" : {
+               "slr" : "SLR0",
+               "index" : "0",
+               "mode" : "slave",
+               "sptag" : "DDR",
+               "data_width" : "512",
+               "max_masters" : "15"
+            },
+            "DDR4_MEM02" : {
+               "slr" : "SLR3",
+               "index" : "3",
+               "mode" : "slave",
+               "sptag" : "DDR",
+               "data_width" : "512",
+               "max_masters" : "15"
+            },
+            "DDR4_MEM01" : {
+               "slr" : "SLR2",
+               "index" : "2",
+               "mode" : "slave",
+               "sptag" : "DDR",
+               "data_width" : "512",
+               "max_masters" : "15"
+            }
+         }
+      },
+      "placement" : {
+         "HOST" : {
+            "0" : "SLR2"
+         },
+         "PLRAM" : {
+            "1" : "SLR1",
+            "3" : "SLR3",
+            "0" : "SLR0",
+            "2" : "SLR2"
+         },
+         "DDR" : {
+            "1" : "SLR1",
+            "3" : "SLR3",
+            "0" : "SLR0",
+            "2" : "SLR2"
+         }
+      },
+      "feature_support" : {
+         "software_emulation" : "1",
+         "HOST" : "1",
+         "PLRAM" : "4",
+         "hardware_emulation" : "1",
+         "gts" : 2,
+         "DDR" : "4"
+      },
+      "num_compute_units" : "60",
+      "part" : "xcu250-figd2104-2L-e",
+      "slrs" : [
+         "SLR0",
+         "SLR1",
+         "SLR2",
+         "SLR3"
+      ],
+      "schema_version" : "1.0"
+   },
+   "revision_control" : {
+      "version" : "4.1",
+      "release" : "3512975"
+   }
+}

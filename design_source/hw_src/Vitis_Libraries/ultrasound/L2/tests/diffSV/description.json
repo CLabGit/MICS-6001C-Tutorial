@@ -1,0 +1,68 @@
+{
+    "name": "L1 diffSV Test",
+    "description": "diffSV Test",
+    "flow": "aie",
+    "gui": true,
+    "platform_allowlist": [
+        "vck190"
+    ],
+    "platform_blocklist": [],
+    "platform_properties": {
+        "vck190": {
+            "v++": {
+                "compiler": {
+                    "clflags": [
+                        ""
+                    ]
+                }
+            }
+        }
+    },
+    "data": [
+        "LIB_DIR/L2/tests/diffSV/data"
+    ],
+    "aiecompiler": {
+        "compiler": {
+            "includepaths": [
+                "LIB_DIR/L1/include/",
+                "LIB_DIR/L1/include/diffSV"
+            ]
+        }
+    },
+    "aiecontainers": [
+        {
+            "accelerators": [
+                {
+                    "location": "LIB_DIR/L2/tests/diffSV/test.cpp",
+                    "workdir": "./Work",
+                    "name": "libadf.a",
+                    "config": "aie.cfg",
+                    "files": [
+                        "LIB_DIR/L1/include/diffSV/diffSV.cpp"
+                    ]
+                }
+            ]
+        }
+    ],
+    "testinfo": {
+        "disable": false,
+        "jobs": [
+            {
+                "index": 0,
+                "dependency": [],
+                "env": "",
+                "cmd": "",
+                "max_memory_MB": 32768,
+                "max_time_min": 300
+            }
+        ],
+        "targets": [
+            "vitis_aie_sim",
+            "vitis_aie_x86sim"
+        ],
+        "category": "canary"
+    },
+    "aie_types": [
+        "AIE1"
+    ]
+}

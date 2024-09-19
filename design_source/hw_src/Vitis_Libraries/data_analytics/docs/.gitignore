@@ -1,0 +1,5 @@
+.stamp
+_build
+build
+rst*
+xml*

@@ -1,0 +1,114 @@
+{
+  "low_level_file":"fft_window.json",
+  "ip_name": "vmc_fft_window",
+  "block_info": {
+    "label": "Window Function",
+    "description": "Window function block for AI Engines."
+  },
+  "parameters": [
+    {
+      "key": "TT_DATA",
+      "name": "data_type",
+      "default": "cint16",
+            "label": "Input/Output data type:",
+            "tablabel": "Main",
+            "parameterType":"popup"
+    },
+    {
+      "key": "TT_COEFF",  
+      "name": "coeff_type",
+      "default": "int16",
+      "validator": {
+        "file": "vmc_fft_window.py",
+        "function": "vmc_validate_coeff_type",
+        "args": [ "data_type" ]
+      },
+            "label": "Function coefficient data type:",
+            "tablabel": "Main",
+            "parameterType":"popup"
+    },
+    { 
+      "name": "coeff",
+      "element_type": "coeff_type",
+      "default": "[1, zeros(1,63)]",
+      "type": "vector",
+      "validator": {
+        "file": "vmc_fft_window.py",
+        "function": "vmc_validate_coeff",
+        "args": ["point_size","is_dyn_pt_size"]
+      },
+            "label": "Function coefficients:",
+            "tablabel": "Main",
+            "parameterType":"edit"
+    },
+    {
+      "key": "TP_POINT_SIZE",
+      "name": "point_size",
+      "default": 64,
+      "validator": {
+        "file": "vmc_fft_window.py",
+        "function": "vmc_validate_point_size",
+        "args": ["data_type"]
+      },
+            "label": "FFT/IFFT point size:",
+            "tablabel": "Main",
+            "parameterType":"edit"
+    },
+    { 
+      "key": "TP_DYN_PT_SIZE",
+      "name": "is_dyn_pt_size",
+      "type":"bool", 
+      "default": false,
+      "validator": {
+        "file": "vmc_fft_window.py",
+        "function": "vmc_validate_is_dyn_pt_size",
+        "args": [ "point_size" ]
+      },
+            "label": "Use dynamic point size",
+            "tablabel": "Main",
+            "parameterType":"checkbox"
+    },
+    {
+      "key": "TP_WINDOW_VSIZE",
+      "name": "input_window_size",
+      "default": 64,
+      "validator": {
+        "file": "vmc_fft_window.py",
+        "function": "vmc_validate_input_window_size",
+        "args": [ "point_size" ]
+      },
+            "label": "Input window size (Number of Samples):",
+            "tablabel": "Main",
+            "parameterType":"edit"
+    },
+    {
+      "key": "TP_SHIFT",
+      "name": "shift_val",
+      "description": "",
+      "default": 0,
+      "validator": {
+        "file": "vmc_fft_window.py",
+        "function": "vmc_validate_shift_val",
+        "args": [ "data_type" ]
+      },
+            "label": "Scale output down by 2^:",
+            "tablabel": "Main",
+            "parameterType":"edit"
+    },
+	{
+	  "key": "AIE_VARIANT",
+	  "name": "AIE_VARIANT",
+      "description": "Specifies the device type: 1-AIE, 2-AIE-ML",
+      "default": 1,
+	  "label": "AIE Variant:",
+      "tablabel": "Main",
+      "parameterType":"edit"
+    }
+
+    
+  ],
+  "generator": {
+    "file": "vmc_fft_window.py",
+    "function": "vmc_generate_graph"
+  }
+}
