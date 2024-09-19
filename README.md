@@ -7,8 +7,6 @@
 
 *Acknowledgement*: This tutorial is adapted from [Vitis™ Hardware Acceleration Introduction Tutorial](https://github.com/Xilinx/Vitis-Tutorials/tree/2024.1/Hardware_Acceleration/Design_Tutorials/10-get_moving_with_alveo) and modified to our server environment. 
 
-# Get Moving with Alveo
-
 ## Introduction
 
 ***Version: Vitis 2024.1***
