@@ -65,7 +65,7 @@ make run TARGET=hw
 
 Once the build is completed, a folder `build` under directory `design_source` will contain all the executables and `alveo_example.xclbin` to run the tutorial.
 
-*Important*: since hardware compilation is time consuming (around 3 hours), we prepare prebuilt xclbin file under the folder `design_source/build`, so that you can directly run the programs with it. 
+*Important*: since hardware compilation is time consuming (around 3 hours), we prepare prebuilt xclbin file under the folder `design_source/prebuilt`, so that you can directly run the programs with it. 
 
 *So far, you have the executables for this tutorial. Next, follow the documents below to finish the tutorial.*
 
