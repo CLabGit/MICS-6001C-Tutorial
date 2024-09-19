@@ -1,1 +1,0 @@
-write_ini hls_config_tonemapping_accel.cfg

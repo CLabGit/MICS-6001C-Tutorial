@@ -1,1 +1,0 @@
-write_ini hls_config_dense_non_pyr_of_accel.cfg

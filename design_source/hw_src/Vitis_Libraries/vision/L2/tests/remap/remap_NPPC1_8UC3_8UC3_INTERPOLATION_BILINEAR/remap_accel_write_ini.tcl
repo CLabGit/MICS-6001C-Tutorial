@@ -1,1 +1,0 @@
-write_ini hls_config_remap_accel.cfg

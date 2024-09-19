@@ -1,1 +1,0 @@
-write_ini hls_config_pyr_up_accel.cfg

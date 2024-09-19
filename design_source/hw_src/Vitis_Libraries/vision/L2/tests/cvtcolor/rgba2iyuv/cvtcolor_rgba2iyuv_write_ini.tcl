@@ -1,1 +1,0 @@
-write_ini hls_config_cvtcolor_rgba2iyuv.cfg

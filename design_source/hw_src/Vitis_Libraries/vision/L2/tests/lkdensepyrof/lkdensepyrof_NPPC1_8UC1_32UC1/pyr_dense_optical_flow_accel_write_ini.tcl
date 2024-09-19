@@ -1,1 +1,0 @@
-write_ini hls_config_pyr_dense_optical_flow_accel.cfg

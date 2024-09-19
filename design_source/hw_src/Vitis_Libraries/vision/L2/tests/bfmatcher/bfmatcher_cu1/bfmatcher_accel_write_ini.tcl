@@ -1,1 +1,0 @@
-write_ini hls_config_bfmatcher_accel.cfg
