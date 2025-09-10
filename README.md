@@ -41,7 +41,7 @@ ssh connect\your email perfix@10.92.254.209
 For Linux/Mac:
 ssh connect\\your email perfix@10.92.254.209 
 
-For example, if my email were czhang539@connect.hkust-gz.edu.cn and I was using Windows, I would connect with ssh connect\czhang539@10.92.254.209.
+For example, if my email is czhang539@connect.hkust-gz.edu.cn and I am using Windows, I would connect with ssh connect\czhang539@10.92.254.209.
 
 // Initial password is your campus email password
 // Please change your password after logging in(passwd)
