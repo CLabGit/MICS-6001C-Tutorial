@@ -36,18 +36,29 @@ Note: The `hw_emu` is not tested for this release.
 Firstly, access the server via SSH (in compus only).
 
 ```
-ssh yourfirstname@10.92.254.206 
-// Initial password is 1qaz@WSX 
-// Please change your password after logging in
+For windows:
+ssh connect\your email perfix@10.92.254.209 
+For Linux/Mac:
+ssh connect\\your email perfix@10.92.254.209 
+
+For example, if my email were czhang539@connect.hkust-gz.edu.cn and I was using Windows, I would connect with ssh connect\czhang539@10.92.254.209.
+
+// Initial password is your campus email password
+// Please change your password after logging in(passwd)
 ```
 
 Secondly, setup Vitis and XRT environment.
 ```
-source /opt/Xilinx/Vitis/2024.1/settings64.sh
+source /data-hdd/opt/Xilinx/Vitis/2024.1/settings64.sh 
 source /opt/xilinx/xrt/setup.sh
+
+We strongly recommend visiting https://clab-hkust-gz.github.io/server-docs/userguide/fpga.html to learn how to use XRT, which includes testing the basic information and functionality of the FPGA, programming the bitstream, etc.
+
 ```
 Thirdly, clone the repository.
 ```
+If the download is very slow, you can download the project to your local machine first and then upload it to the server.
+
 git clone https://github.com/CLabGit/MICS-6001C-Tutorial.git
 cd MICS-6001C-Tutorial
 ```
@@ -55,7 +66,7 @@ cd MICS-6001C-Tutorial
 Then, setup environment variables: `PLATFORM` and `PLATFORM_REPO_PATH`.
 
 ```
-export PLATFORM=xilinx_u250_gen3x16_xdma_4_1_202210_1 # Example to set the PLATFORM before launching the run 
+export PLATFORM=xilinx_u55c_gen3x16_xdma_3_202210_1   # Example to set the PLATFORM before launching the run 
 export PLATFORM_REPO_PATH=/opt/xilinx/platforms/      # Example to set the PLATFORM_REPO_PATH before launching the run
 ```
 Finaly, build the hardware in a push-button manner.
