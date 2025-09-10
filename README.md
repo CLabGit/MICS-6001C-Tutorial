@@ -37,11 +37,11 @@ Firstly, access the server via SSH (in compus only).
 
 ```
 For windows:
-ssh connect\your email perfix@10.92.254.209 
+ssh connect\your email perfix@10.92.254.206 
 For Linux/Mac:
-ssh connect\\your email perfix@10.92.254.209 
+ssh connect\\your email perfix@10.92.254.206 
 
-For example, if my email is czhang539@connect.hkust-gz.edu.cn and I am using Windows, I would connect with ssh connect\czhang539@10.92.254.209.
+For example, if my email is czhang539@connect.hkust-gz.edu.cn and I am using Windows, I would connect with ssh connect\czhang539@10.92.254.206.
 
 // Initial password is your campus email password
 // Please change your password after logging in(passwd)
@@ -66,8 +66,8 @@ cd MICS-6001C-Tutorial
 Then, setup environment variables: `PLATFORM` and `PLATFORM_REPO_PATH`.
 
 ```
-export PLATFORM=xilinx_u55c_gen3x16_xdma_3_202210_1   # Example to set the PLATFORM before launching the run 
-export PLATFORM_REPO_PATH=/opt/xilinx/platforms/      # Example to set the PLATFORM_REPO_PATH before launching the run
+export PLATFORM=xilinx_u250_gen3x16_xdma_4_1_202210_1   # Example to set the PLATFORM before launching the run 
+export PLATFORM_REPO_PATH=/opt/xilinx/platforms/        # Example to set the PLATFORM_REPO_PATH before launching the run
 ```
 Finaly, build the hardware in a push-button manner.
 ```
